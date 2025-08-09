@@ -1,0 +1,34 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "test": "jest",
+    "seed": "node seedData.js",
+    "db:test": "node ../test-mongodb-connection.js",
+    "db:status": "powershell -ExecutionPolicy Bypass -File ../mongodb-control.ps1 -Action status",
+    "db:start": "powershell -ExecutionPolicy Bypass -File ../mongodb-control.ps1 -Action start",
+    "db:stop": "powershell -ExecutionPolicy Bypass -File ../mongodb-control.ps1 -Action stop"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.53.0",
+    "azure-storage": "^2.10.7",
+    "cors": "^2.8.5",
+    "csv-parser": "^3.2.0",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "mongoose": "^8.17.0",
+    "morgan": "^1.10.1",
+    "multer": "^2.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
